@@ -1,30 +1,64 @@
 body, html {
     font-family: Helvetica, sans-serif;
-    margin: 0;
 }
 
-/* === RETURN TO TOP SECTION*/
 
-/*.alert-info > a{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    color: black;*/
-/*    text-decoration: none;*/
-/*    background-color: #CBFFFF;*/
-/*    border: 2px solid #ccc;*/
-/*    padding: 1rem 0;*/
-/*    margin: 0 .5rem;*/
-/*}*/
+#social-media-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 1rem 0;
+    float: right;
+}
+
+#social-media-links > a {
+    color: transparent;
+    text-decoration: none;
+    font-size: .01em;
+    padding-right: .5rem;
+}
 
 
+#social-media-links > a:first-child >svg {
+    height: 2rem;
+    fill: blue;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 2px rgba(0 0 0 / .2));
+    cursor: pointer;
+}
+
+#social-media-links > a:nth-child(2) > svg {
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    border-radius: 2ex;
+    filter: drop-shadow(0px 0px 2px rgba(0 0 0 / .2));
+    cursor: pointer;
+}
+
+#social-media-links > a:nth-child(3) > svg {
+    height: 1.25rem;
+    filter: drop-shadow(0px 0px 2px rgba(0 0 0 / .2));
+    cursor: pointer;
+}
+
+#social-media-links > a:nth-child(4) > svg {
+    height: 1.25rem;
+    border: 1px solid black;
+    border-radius: 2ex;
+    filter: drop-shadow(0px 0px 2px rgba(0 0 0 / .2));
+    cursor: pointer;
+}
 
 
-
-
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
     body, html {
-        margin: 0 1rem;
+        margin: 0 .25rem 0 .25rem;
+        padding: 0;
     }
+
     .hidden-on-desktop {
         display: none;
     }
@@ -33,14 +67,18 @@ body, html {
 
     h1 {
         display: inline-flex;
+        font-size: 3rem;
+        height: 100%;
+        margin: 3rem 0;
     }
 
     /* === NAV SECTION === */
 
     nav {
-        display: inline-block;
+        display: inline-flex;
+
         float: right;
-        margin-top: 2rem;
+        margin-top: 4.5rem;
     }
 
     .nav-links {
@@ -64,9 +102,6 @@ body, html {
     /* === IMG SECTION === */
 
     .header-img {
-        display: flex;
-        flex-display: column;
-        /*width: 50rem;*/
         margin: 0;
         padding: 0;
     }
@@ -81,26 +116,31 @@ body, html {
     /* === 1ST ARTICLE SECTION === */
 
     .main {
-        display: inline-flex;
-        flex-direction: column;
+        display: inline-block;
         width: 60%;
     }
 
     /* === 2ND ARTICLE SECTION === */
 
     .sub-section {
-        display: inline-flex;
-        flex-direction: column;
+        display: inline-block;
+        /*flex-direction: column;*/
         width: 39%;
+        float: right;
         font-style: italic;
     }
 
     /* === Footer (sneaky devil)=== */
 
+    footer {
+        display: inline-flex;
+        width: 100%;
+        margin: 5rem 0 5rem 0;
+    }
+
     footer > p {
         display: flex;
         width: 50%;
-        margin: 50rem 0 10rem 0;
     }
 }
 
@@ -110,9 +150,7 @@ body, html {
 /* === DONT TOUCH YOU IDIOT ====*/
 
 
-@media screen and (max-width: 499px) {
-
-
+@media screen and (min-width: 300px) and (max-width: 549px) {
 
     /* === RETURN TO TOP SECTION*/
 
@@ -168,13 +206,14 @@ body, html {
 
     .header-img {
         display: flex;
-        justify-content: center;
-        margin: 1rem 0 0 0;
+        margin: 0;
     }
 
+
     img {
-        width: 339px;
-        height: 224px;
+        width: 90vw;
+        margin: 0 1.1em;
+        border: none;
     }
 
     /* === MAIN SECTION === */
@@ -191,6 +230,31 @@ body, html {
     }
 
     footer {
-        margin: 0 1em;
+        display: inline-flex;
+        width: 100%;
+        margin: 5rem 0;
+    }
+
+    footer > p {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0 1rem 0 0;
+    }
+
+    #social-media-links {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin: 1rem 0;
+        float: right;
+    }
+
+    #social-media-links > a {
+        color: transparent;
+        text-decoration: none;
+        font-size: .01em;
+        padding-right: .5rem;
     }
 }
